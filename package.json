@@ -11,7 +11,9 @@
     "build-dev": "webpack src/index.js dist/vuexfire.js --output-library=VuexFire --output-library-target=umd",
     "build-prod": "webpack src/index.js dist/vuexfire.min.js --output-library=VuexFire --output-library-target=umd -p",
     "build": "npm run build-dev && npm run build-prod",
-    "preversion": "npm run build"
+    "preversion": "npm run build",
+    "install": "peerdep",
+    "demo": "npm run build-dev && echo '\n\n*** server should listen at https://posva-vuefirex-chrisbraddock.c9users.io/index.html ***\n\n' && cd examples/TodoApp && simple-server . 8080"
   },
   "repository": {
     "type": "git",
@@ -41,9 +43,9 @@
     "eslint": "^3.3.1",
     "eslint-config-standard": "^6.0.0-beta.3",
     "eslint-plugin-html": "^1.5.2",
-    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.0",
-    "firebase": "^3.3.0",
+    "firebase": "^3.5.3",
     "istanbul-instrumenter-loader": "^0.2.0",
     "karma": "^1.2.0",
     "karma-coverage": "^1.1.1",
@@ -55,12 +57,15 @@
     "karma-webpack": "^1.8.0",
     "lolex": "^1.5.1",
     "mocha": "^3.0.2",
+    "peerdep": "^0.1.0",
     "phantomjs-prebuilt": "^2.1.12",
     "promise-polyfill": "^6.0.1",
+    "simple-server": "^1.0.1",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
     "vue": "^1.0.26",
     "vuex": "^2.0.0-rc.5",
     "webpack": "^1.13.2"
-  }
+  },
+  "dependencies": {}
 }
