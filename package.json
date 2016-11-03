@@ -13,7 +13,7 @@
     "build": "npm run build-dev && npm run build-prod",
     "preversion": "npm run build",
     "install": "peerdep",
-    "demo": "npm run build-dev && echo '\n\n*** server should listen at https://posva-vuefirex-chrisbraddock.c9users.io/index.html ***\n\n' && cd examples/TodoApp && simple-server . 8080"
+    "demo": "npm run build-dev && cd examples/TodoApp && simple-server . 8080"
   },
   "repository": {
     "type": "git",
